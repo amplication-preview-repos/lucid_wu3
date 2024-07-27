@@ -1,0 +1,30 @@
+import { InputJsonValue } from "../../types";
+import { SentNotificationUpdateManyWithoutUsersInput } from "./SentNotificationUpdateManyWithoutUsersInput";
+import { ReviewUpdateManyWithoutUsersInput } from "./ReviewUpdateManyWithoutUsersInput";
+
+export type UserUpdateInput = {
+  firstName?: string | null;
+  lastName?: string | null;
+  username?: string;
+  email?: string | null;
+  password?: string;
+  roles?: InputJsonValue;
+  createdBy?: string | null;
+  updatedBy?: string | null;
+  deletedBy?: string | null;
+  pushNotifications?: boolean | null;
+  emailNotifications?: boolean | null;
+  profileImage?: string | null;
+  emailVerified?: boolean | null;
+  sentNotifications?: SentNotificationUpdateManyWithoutUsersInput;
+  city?: string | null;
+  state?: string | null;
+  zipCode?: string | null;
+  accountNumber?: string | null;
+  street?: string | null;
+  country?: string | null;
+  bankName?: string | null;
+  routingNumber?: string | null;
+  accountType?: "Option1" | null;
+  reviews?: ReviewUpdateManyWithoutUsersInput;
+};

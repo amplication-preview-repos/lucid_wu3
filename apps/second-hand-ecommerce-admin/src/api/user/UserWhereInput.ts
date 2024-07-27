@@ -1,0 +1,31 @@
+import { StringFilter } from "../../util/StringFilter";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
+import { SentNotificationListRelationFilter } from "../sentNotification/SentNotificationListRelationFilter";
+import { ReviewListRelationFilter } from "../review/ReviewListRelationFilter";
+
+export type UserWhereInput = {
+  id?: StringFilter;
+  firstName?: StringNullableFilter;
+  lastName?: StringNullableFilter;
+  username?: StringFilter;
+  email?: StringNullableFilter;
+  createdBy?: StringNullableFilter;
+  updatedBy?: StringNullableFilter;
+  deletedBy?: StringNullableFilter;
+  pushNotifications?: BooleanNullableFilter;
+  emailNotifications?: BooleanNullableFilter;
+  profileImage?: StringNullableFilter;
+  emailVerified?: BooleanNullableFilter;
+  sentNotifications?: SentNotificationListRelationFilter;
+  city?: StringNullableFilter;
+  state?: StringNullableFilter;
+  zipCode?: StringNullableFilter;
+  accountNumber?: StringNullableFilter;
+  street?: StringNullableFilter;
+  country?: StringNullableFilter;
+  bankName?: StringNullableFilter;
+  routingNumber?: StringNullableFilter;
+  accountType?: "Option1";
+  reviews?: ReviewListRelationFilter;
+};

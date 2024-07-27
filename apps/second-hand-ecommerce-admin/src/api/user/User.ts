@@ -1,0 +1,32 @@
+import { JsonValue } from "type-fest";
+import { SentNotification } from "../sentNotification/SentNotification";
+import { Review } from "../review/Review";
+
+export type User = {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+  firstName: string | null;
+  lastName: string | null;
+  username: string;
+  email: string | null;
+  roles: JsonValue;
+  createdBy: string | null;
+  updatedBy: string | null;
+  deletedBy: string | null;
+  pushNotifications: boolean | null;
+  emailNotifications: boolean | null;
+  profileImage: string | null;
+  emailVerified: boolean | null;
+  sentNotifications?: Array<SentNotification>;
+  city: string | null;
+  state: string | null;
+  zipCode: string | null;
+  accountNumber: string | null;
+  street: string | null;
+  country: string | null;
+  bankName: string | null;
+  routingNumber: string | null;
+  accountType?: "Option1" | null;
+  reviews?: Array<Review>;
+};
